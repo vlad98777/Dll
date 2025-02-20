@@ -22,7 +22,7 @@ using System.Threading.Tasks;
 
             public static bool IsValidPhone(string phone)
             {
-                return Regex.IsMatch(phone, @"^\+\d{1,3} \d{1,4} \d{7,10}$"); // Пример формата: +1 1234 5678901
+                return Regex.IsMatch(phone, @"^\+\d{1,3} \d{1,4} \d{7,10}$"); 
             }
 
             public static bool IsValidEmail(string email)
