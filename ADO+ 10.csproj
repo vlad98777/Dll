@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1F9579A6-F587-45B5-8286-0F55BCE3A06C}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ADO__10</RootNamespace>
+    <AssemblyName>ADO+ 10</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Class Library%29\Class Library%29.csproj">
+      <Project>{a5bb4a75-5960-4209-a463-00b1aac44f1d}</Project>
+      <Name>Class Library%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FileSystemLibrary\FileSystemLibrary.csproj">
+      <Project>{80dd8418-cf01-4350-be4d-b30a48b5cd4b}</Project>
+      <Name>FileSystemLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GeometryLibrary\GeometryLibrary.csproj">
+      <Project>{2e93f4ad-94f5-4bbd-b887-b3f053c1148a}</Project>
+      <Name>GeometryLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TextLibrary\TextLibrary.csproj">
+      <Project>{7c1466fe-c50d-4e38-911e-39d244d4d11b}</Project>
+      <Name>TextLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ValidationLibrary\ValidationLibrary.csproj">
+      <Project>{982878cd-9e81-4d73-8ee7-564ef9b783a9}</Project>
+      <Name>ValidationLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
